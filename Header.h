@@ -1,7 +1,5 @@
 #pragma once
-/*
 
-*/
 template <class T>
 struct TNode {
 	T val;
@@ -92,6 +90,7 @@ public:
 		newEl->val = el;
 		newEl->pNext = pStop;
 		pLast->pNext = newEl;
+		pLast = newEl;
 		length++;
 	}
 
@@ -159,7 +158,7 @@ public:
 		return pCurrent == pStop;
 	}
 
-protected: //planning to 
+protected: //planning to inheritance
 	TNode<T>* pFirst; //compulsary
 	TNode<T>* pLast; //for simplicity
 	TNode<T>* pStop; //ptr of last element (usually nullptr)
